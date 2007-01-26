@@ -1,0 +1,11 @@
+Package: SLqPCR
+Type: Package
+Title: Functions for analysis of real-time quantitative PCR data at SIRS-Lab GmbH
+Version: 1.0.0
+Date: 2007-01-02
+Author: Dr. Matthias Kohl
+Maintainer: Dr. Matthias Kohl <kohl@sirs-lab.com>
+Description: Functions for analysis of real-time quantitative PCR data at SIRS-Lab GmbH
+Depends: R(>= 2.4.0), stats, RColorBrewer
+biocViews: Statistics
+License: GPL (version 2 or later)
