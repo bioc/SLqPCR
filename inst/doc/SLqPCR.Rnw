@@ -5,7 +5,6 @@
 %
 \documentclass[11pt]{article}
 \usepackage{geometry}\usepackage{color}
-\usepackage{ifpdf}
 \definecolor{darkblue}{rgb}{0.0,0.0,0.75}
 \usepackage[%
 baseurl={http://www.sirs-lab.com},%
@@ -30,11 +29,7 @@ pagecolor=darkblue,raiselinks,plainpages,pdftex]{hyperref}
 %-------------------------------------------------------------------------------
 \author{Dr. Matthias Kohl\\ 
 SIRS-Lab GmbH (Jena, Germany)\medskip\\
-\ifpdf
-  \includegraphics[width = 3cm]{SLlogo.pdf}
-\else
-  \includegraphics[width = 3cm]{SLlogo.eps}
-\fi
+\includegraphics[width = 3cm]{SLlogo.png}
 }
 \maketitle
 \tableofcontents
@@ -63,10 +58,10 @@ is repeated until two respectively \code{minNrHK} is reached.
 <<fig2, eval = TRUE>>=
 tissue <- as.factor(c(rep("BM", 9), rep("POOL", 9), rep("FIB", 20), rep("LEU", 13), rep("NB", 34)))
 res.BM <- selectHKgenes(vandesompele[tissue == "BM",], method = "Vandesompele", geneSymbol = names(vandesompele), minNrHK = 2, trace = TRUE, na.rm = TRUE)
-res.POOL <- selectHKgenes(vandesompele[tissue == "POOL",], method = "Vandesompele", geneSymbol = names(vandesompele), minNrHK = 2, trace = TRUE, na.rm = TRUE)
-res.FIB <- selectHKgenes(vandesompele[tissue == "FIB",], method = "Vandesompele", geneSymbol = names(vandesompele), minNrHK = 2, trace = TRUE, na.rm = TRUE)
-res.LEU <- selectHKgenes(vandesompele[tissue == "LEU",], method = "Vandesompele", geneSymbol = names(vandesompele), minNrHK = 2, trace = TRUE, na.rm = TRUE)
-res.NB <- selectHKgenes(vandesompele[tissue == "NB",], method = "Vandesompele", geneSymbol = names(vandesompele), minNrHK = 2, trace = TRUE, na.rm = TRUE)
+res.POOL <- selectHKgenes(vandesompele[tissue == "POOL",], method = "Vandesompele", geneSymbol = names(vandesompele), minNrHK = 2, trace = FALSE, na.rm = TRUE)
+res.FIB <- selectHKgenes(vandesompele[tissue == "FIB",], method = "Vandesompele", geneSymbol = names(vandesompele), minNrHK = 2, trace = FALSE, na.rm = TRUE)
+res.LEU <- selectHKgenes(vandesompele[tissue == "LEU",], method = "Vandesompele", geneSymbol = names(vandesompele), minNrHK = 2, trace = FALSE, na.rm = TRUE)
+res.NB <- selectHKgenes(vandesompele[tissue == "NB",], method = "Vandesompele", geneSymbol = names(vandesompele), minNrHK = 2, trace = FALSE, na.rm = TRUE)
 @
 We obtain the following ranking of genes (cf. Table~3 in Vand02)
 <<table3, eval = TRUE>>=
