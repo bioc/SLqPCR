@@ -1,7 +1,7 @@
 Package: SLqPCR
 Type: Package
 Title: Functions for analysis of real-time quantitative PCR data at SIRS-Lab GmbH
-Version: 1.18.0
+Version: 1.19.0
 Date: 2007-19-04
 Author: Matthias Kohl
 Maintainer: Matthias Kohl <kohl@sirs-lab.com>
